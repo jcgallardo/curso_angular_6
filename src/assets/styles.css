@@ -1,3 +1,19 @@
+
+nav a{
+    padding: 10px;
+}
+.cuadrado{
+    height: 100px;
+    width: 200px;
+    border: 1px solid red;
+}
 .fondoAzul{
     background: lightblue !important;
+}
+.fondoVerde{
+    background: lightgreen !important;
+}
+
+.activado{
+    font-weight: bold;
 }

@@ -4,6 +4,15 @@
     {{ title }}!
   </h1>
   <hr>
-  <empleado></empleado>
+
+  <nav>
+    <a [routerLink]="['/home']" [routerLinkActive]="['activado']">Home</a>
+    <a [routerLink]="['/empleado']" [routerLinkActive]="['activado']">Empleados</a>
+    <a [routerLink]="['/fruta']" [routerLinkActive]="['activado']">Frutas</a>
+    <a [routerLink]="['/contacto']" [routerLinkActive]="['activado']">Contacto</a>
+  </nav>
+
+  <!-- <empleado></empleado> -->
+  <router-outlet></router-outlet>
 </div>
 

@@ -1,9 +1,13 @@
 <h2>{{ title }}</h2>
 <hr/>
 
-<!--  -->
+<!-- [ngClass] -->
 <hr/>
-
+<h3>[ngClass]</h3>
+<div class="cuadrado" [ngClass]="{
+    fondoAzul: color_seleccionado == 'blue',
+    fondoVerde : color_seleccionado == 'green'
+}"></div>
 
 
 
@@ -15,7 +19,7 @@
 
 <div [ngStyle]="{
     'width':'200px',
-    'height': '200px',
+    'height': '100px',
     'background': color_seleccionado,
     'margin-top' : '20px'}" 
 [style.border]="color_seleccionado == 'red' ? '3px solid black' : 'none'"
