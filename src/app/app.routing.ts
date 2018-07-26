@@ -7,6 +7,7 @@ import { FrutaComponent } from './fruta/fruta.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { HomeComponent } from './home/home.component';
 import { CochesComponent } from './coches/coches.component';
+import { PlantillasComponent } from './plantillas/plantillas.component';
 
 // rutas json
 const appRoutes: Routes = [
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
     {path: 'contacto/:page', component: ContactoComponent},
     {path: 'fruta', component: FrutaComponent},
     {path: 'coches', component: CochesComponent},
+    {path: 'plantillas', component: PlantillasComponent},
     {path: '**', component: HomeComponent}
 ]
 
