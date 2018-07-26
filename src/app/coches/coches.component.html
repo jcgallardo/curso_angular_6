@@ -1,0 +1,68 @@
+<h1>{{title}}</h1>
+
+<style>
+    form{
+        width: 200px;
+    }
+
+    input[type="text"], span{
+        display: block;
+        width: 100%;
+    }
+
+    .flotante{
+        float:left;
+        margin-left: 30px;
+    }
+</style>
+
+<div class="flotante">
+    <h2>Formulario</h2>
+    <form #formCoche="ngForm" (ngSubmit)="onSubmit(); formCoche.reset()">
+        <p>
+            <label>Nombre: </label>
+            <input name="nombre" #nombre="ngModel" [(ngModel)]="coche.nombre" type="text" required />
+            <span *ngIf="nombre.touched && !nombre.valid">
+                El nombre del coche es incorrecto
+            </span>
+        </p>
+
+        <p>
+            <label>CV: </label>
+            <input name="cv" type="text" #caballaje="ngModel" [(ngModel)]="coche.caballaje" required pattern="[0-9]+" />
+            <span *ngIf="caballaje.touched && !caballaje.valid">
+                El caballaje del coche es incorrecto
+            </span>
+        </p>
+
+        <p>
+            <label>Color: </label>
+            <input name="color" type="text" #color="ngModel" [(ngModel)]="coche.color" required pattern="[a-zA-Z#]+"/>
+            <span *ngIf="color.touched && !color.valid">
+                El color del coche es incorrecto
+            </span>
+        </p>
+
+        <input type="submit" value="Guardar" [disabled]="!formCoche.valid" />
+    </form>
+</div>
+
+
+<div class="flotante">
+    <h2>Listado de coches</h2>
+    <ul>
+        <li *ngFor="let coche of coches">
+            {{coche.nombre}}, {{coche.caballaje}}, {{coche.color}}
+        </li>
+    </ul>
+</div>
+
+<div class="flotante">
+        <h2>Listado de articulos</h2>
+        <ul *ngIf="articulos">
+            <li *ngFor="let articulo of articulos">
+                {{articulo.id}}, {{articulo.title}}
+            </li>
+        </ul>
+        <span *ngIf="!articulos">Cargando...</span>
+    </div>

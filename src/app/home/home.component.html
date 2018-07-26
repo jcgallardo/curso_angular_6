@@ -1,6 +1,7 @@
-<h2>{{ titulo }}</h2>
+<h2>{{ titulo }} {{ nombre | uppercase }}</h2>
 
 <h3>Listado de prendas de ropa a {{ fecha | date: 'dd/MM/yyyy' }}</h3>
+<h5>Conversor: {{ 5 | conversor: 7 }}</h5>
 
 <input type="text" [(ngModel)]="prenda" />
 <button (click)="addPrenda()">Añadir prenda</button>

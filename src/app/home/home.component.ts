@@ -9,6 +9,7 @@ import { RopaService } from '../services/ropa.service';
 
 export class HomeComponent{
     public titulo = "Página principal";
+    public nombre = "Juan Carlos";
     public listado_ropa:Array<String>;
     public prenda: String;
     public fecha;
